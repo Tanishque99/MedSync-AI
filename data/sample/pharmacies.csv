@@ -1,0 +1,31 @@
+pharmacy_id,pharmacy_name,city,state,latitude,longitude
+PH001,Walmart Pharmacy #1,Scottsdale,AZ,33.442261,-111.980738
+PH002,CVS Pharmacy #2,Phoenix,AZ,33.490302,-112.056244
+PH003,Walgreens #3,Tempe,AZ,33.427419,-111.933771
+PH004,Safeway Pharmacy #4,Mesa,AZ,33.406364,-111.836054
+PH005,Walgreens #5,Scottsdale,AZ,33.456566,-111.907223
+PH006,CVS Pharmacy #6,Scottsdale,AZ,33.522687,-111.880128
+PH007,Safeway Pharmacy #7,Scottsdale,AZ,33.485746,-111.985566
+PH008,Walgreens #8,Tempe,AZ,33.398901,-111.915549
+PH009,Safeway Pharmacy #9,Phoenix,AZ,33.40061,-112.029362
+PH010,Walmart Pharmacy #10,Tempe,AZ,33.404618,-111.945094
+PH011,Costco Pharmacy #11,Mesa,AZ,33.418526,-111.814807
+PH012,Costco Pharmacy #12,Chandler,AZ,33.319557,-111.830859
+PH013,Walmart Pharmacy #13,Mesa,AZ,33.456662,-111.817416
+PH014,Safeway Pharmacy #14,Mesa,AZ,33.42602,-111.810847
+PH015,CVS Pharmacy #15,Mesa,AZ,33.383829,-111.877466
+PH016,Walgreens #16,Mesa,AZ,33.416499,-111.841311
+PH017,Safeway Pharmacy #17,Tempe,AZ,33.411545,-111.97771
+PH018,Walgreens #18,Chandler,AZ,33.31279,-111.842543
+PH019,Walgreens #19,Tempe,AZ,33.40325,-111.94588
+PH020,Walmart Pharmacy #20,Phoenix,AZ,33.502621,-112.075847
+PH021,Costco Pharmacy #21,Tempe,AZ,33.481159,-111.939347
+PH022,Costco Pharmacy #22,Scottsdale,AZ,33.516364,-111.936224
+PH023,Costco Pharmacy #23,Scottsdale,AZ,33.45427,-111.918252
+PH024,Walmart Pharmacy #24,Tempe,AZ,33.369423,-111.973019
+PH025,Walgreens #25,Mesa,AZ,33.448889,-111.823622
+PH026,Safeway Pharmacy #26,Scottsdale,AZ,33.495497,-111.917374
+PH027,Safeway Pharmacy #27,Mesa,AZ,33.453994,-111.847477
+PH028,Costco Pharmacy #28,Phoenix,AZ,33.453962,-112.015227
+PH029,Walgreens #29,Phoenix,AZ,33.424125,-112.014082
+PH030,Walmart Pharmacy #30,Scottsdale,AZ,33.476029,-111.888093

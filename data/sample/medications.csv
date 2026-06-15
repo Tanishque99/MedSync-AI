@@ -1,0 +1,7 @@
+medication_id,medicine_name,drug_class,tablet_strength
+M001,Metformin,Diabetes,500mg
+M002,Lisinopril,Blood Pressure,10mg
+M003,Atorvastatin,Cholesterol,20mg
+M004,Amlodipine,Blood Pressure,5mg
+M005,Levothyroxine,Thyroid,50mcg
+M006,Omeprazole,Acid Reflux,20mg

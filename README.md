@@ -1,39 +1,104 @@
-# MedSync AI — Snowflake Medication Reminder & Refill Intelligence Platform
+# MedSync AI — Snowflake Medication Reminder & Refill PoC
 
-## Problem
-Medication non-adherence and delayed refills can lead to poor patient outcomes. Patients may forget doses or realize too late that tablets are running out.
+Lightweight proof-of-concept scaffold demonstrating a Snowflake bronze→silver→gold ELT pattern, simple synthetic data generation, and a tiny Streamlit UI for local validation.
 
-## Solution
-MedSync AI is a Snowflake-powered data engineering project that simulates medication reminders, tracks adherence, predicts refill needs, and recommends the nearest pharmacy with available inventory.
+Contents
+- `data/sample/` — generated sample CSVs (`patients.csv`, `daily_updates.csv`)
+- `src/` — Python scripts to generate and simulate sample data
+- `snowflake/` — SQL templates for Bronze/Silver/Gold layers and reminder queue
+- `streamlit_app/` — minimal Streamlit demo
+- `docs/` — architecture and data model notes
 
-## Key Features
-- Synthetic patient, prescription, medication, intake log, and pharmacy inventory data
-- Snowflake Bronze/Silver/Gold architecture
+Quickstart
+
+1. Install dependencies (recommended in a virtualenv):
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+2. Generate sample patients:
+
+```bash
+python src/generate_data.py
+```
+
+This writes `data/sample/patients.csv` (default 50 patients). To change the count, edit the script or call `generate_patient(n)`.
+
+3. Simulate daily updates / events:
+
+```bash
+python src/simulate_daily_updates.py
+```
+
+This writes `data/sample/daily_updates.csv` containing simulated touchpoints.
+
+4. Run the Streamlit demo locally:
+
+```bash
+streamlit run streamlit_app/app.py
+```
+
+Snowflake
+
+This repo includes SQL templates to create the database layers and example tables. They are intentionally minimal — adapt to your Snowflake account and run via worksheet or CI:
+
+- `snowflake/00_setup.sql` — environment / schema notes
+- `snowflake/01_bronze_tables.sql` — raw ingest tables
+- `snowflake/02_load_data.sql` — example COPY commands (staging required)
+- `snowflake/03_silver_tables.sql` — curated tables
+- `snowflake/04_gold_marts.sql` — aggregated marts
+- `snowflake/05_reminder_queue.sql` — reminder queue table
+- `snowflake/06_optional_ai_messages.sql` — optional AI templates table
+
+Files and purpose
+
+- `src/generate_data.py` — produces `patients.csv` using `Faker` and `pandas`.
+- `src/simulate_daily_updates.py` — creates `daily_updates.csv` with event_time and notes.
+- `streamlit_app/app.py` — small Streamlit app that lists sample files and acts as a placeholder UI.
+
+Demo Screenshots
+
+The original README included a set of dashboard screenshots. They are preserved below — add or replace the image files in the repo (image.png, image-1.png, ... ) to show the app visuals.
+
+- Front page / headline
+	![alt text](image.png)
+	Caption: Example home screen for the Streamlit dashboard (placeholder).
+
+- Refill status distribution
+	![alt text](image-1.png)
+	Caption: Distribution of refill statuses across patients.
+
+- Adherence distribution
+	![alt text](image-2.png)
+	Caption: Histogram showing adherence scores.
+
+- Patient adherence details
+	![alt text](image-3.png) ![alt text](image-4.png)
+	Caption: Patient-level adherence timeline and details.
+
 - Medication reminder queue
-- Adherence risk scoring
-- Refill date prediction
-- Nearest pharmacy recommendation using geospatial SQL
-- Streamlit dashboard
-- Optional Snowflake Cortex message generation
+	![alt text](image-5.png) ![alt text](image-6.png)
+	Caption: Example reminder queue view and status columns.
 
-## Free Implementation Strategy
-- No real patient data
-- No SMS API
-- No paid pharmacy API
-- No paid cloud storage
-- Snowflake free trial only
-- Local Streamlit dashboard
+- Refill recommendations
+	![alt text](image-7.png) ![alt text](image-8.png)
+	Caption: Candidate refill recommendations and nearby pharmacies.
 
-## Architecture
-Add diagram here.
+- Refill message examples
+	![alt text](image-9.png) ![alt text](image-10.png)
+	Caption: AI-generated or templated reminder messages stored in the queue.
 
-## Data Model
-Explain all source tables and mart tables.
+- High-risk patients
+	![alt text](image-11.png) ![alt text](image-12.png)
+	Caption: Patients flagged for follow-up due to adherence risk.
 
-## Demo Screenshots
-Add dashboard screenshots.
+Notes & Next Steps
 
-## Future Improvements
+- This is a scaffold for experimentation — production deployments require secure credential handling, proper ingestion (Snowpipe/Stream), and compliance reviews before using real PHI.
+- If you want, I can: run the sample data generation in this workspace, add a `Makefile` or `run.sh` for convenience, or create a `README` badge with quick run commands.
+
+Future Improvements
 - Twilio SMS integration
 - Real pharmacy API integration
 - dbt transformations

@@ -66,104 +66,74 @@ Demo Screenshots
 
 The original README included a set of dashboard screenshots. They are preserved below — add or replace the image files in the repo (`image.png`, `image-1.png`, ...) to show the app visuals. Captions are centered and positioned at the bottom of each image; font-size is slightly reduced for subtlety.
 
-<details>
-<summary><strong>Screenshots (click to expand)</strong></summary>
+<div>
+	<!-- Full-width centered figures with bottom-centered captions -->
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image.png" alt="Front page" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Example home screen for the Streamlit dashboard (placeholder).</em></figcaption>
+	</figure>
 
-<br/>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-1.png" alt="Refill status" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Distribution of refill statuses across patients.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:100%; text-align:center; margin: 8px 0;">
-	<div style="display:inline-block; position:relative;">
-		<img src="image.png" alt="Front page" style="max-width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"> <em>Example home screen for the Streamlit dashboard (placeholder).</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-2.png" alt="Adherence distribution" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Histogram showing adherence scores.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-1.png" alt="Refill status" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Distribution of refill statuses across patients.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-3.png" alt="Patient adherence 1" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Patient-level adherence timeline.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-2.png" alt="Adherence distribution" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Histogram showing adherence scores.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-4.png" alt="Patient adherence 2" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Patient details and notes.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-3.png" alt="Patient adherence 1" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Patient-level adherence timeline.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-5.png" alt="Reminder queue 1" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Reminder queue overview.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-4.png" alt="Patient adherence 2" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Patient details and notes.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-6.png" alt="Reminder queue 2" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Queue status and message previews.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-5.png" alt="Reminder queue 1" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Reminder queue overview.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-7.png" alt="Refill recs 1" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Refill recommendations for patients.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-6.png" alt="Reminder queue 2" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Queue status and message previews.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-8.png" alt="Refill recs 2" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Nearby pharmacy suggestions.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-7.png" alt="Refill recs 1" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Refill recommendations for patients.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-9.png" alt="Message examples 1" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Message templates and AI examples.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-8.png" alt="Refill recs 2" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Nearby pharmacy suggestions.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-10.png" alt="Message examples 2" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Personalized refill message preview.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-9.png" alt="Message examples 1" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Message templates and AI examples.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto;">
+		<img src="image-11.png" alt="High risk 1" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>High-risk patient list and action flags.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-10.png" alt="Message examples 2" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Personalized refill message preview.</em></figcaption>
-	</div>
-</figure>
+	<figure style="position:relative; max-width:1100px; margin:24px auto 48px;">
+		<img src="image-12.png" alt="High risk 2" style="width:100%; height:auto; display:block; border-radius:8px;" />
+		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 10px; border-radius:6px; font-size:0.85rem;"><em>Risk scoring and recent activity.</em></figcaption>
+	</figure>
 
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-11.png" alt="High risk 1" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>High-risk patient list and action flags.</em></figcaption>
-	</div>
-</figure>
-
-<figure style="display:inline-block; width:48%; text-align:center; margin: 8px 1%;">
-	<div style="position:relative;">
-		<img src="image-12.png" alt="High risk 2" style="width:100%; height:auto; display:block;" />
-		<figcaption style="position:absolute; left:50%; bottom:18px; transform:translateX(-50%); background:rgba(0,0,0,0.55); color:#fff; padding:6px 8px; border-radius:6px; font-size:0.85rem;"><em>Risk scoring and recent activity.</em></figcaption>
-	</div>
-</figure>
-
-</details>
-
+</div>
 Notes & Next Steps
 
 - This is a scaffold for experimentation — production deployments require secure credential handling, proper ingestion (Snowpipe/Stream), and compliance reviews before using real PHI.

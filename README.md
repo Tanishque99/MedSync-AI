@@ -63,35 +63,35 @@ The original README included a set of dashboard screenshots. They are preserved 
 
 - Front page / headline
 	![alt text](image.png)
-	Caption: Example home screen for the Streamlit dashboard (placeholder).
+	<small><em>Example home screen for the Streamlit dashboard (placeholder).</em></small>
 
 - Refill status distribution
 	![alt text](image-1.png)
-	Caption: Distribution of refill statuses across patients.
+	<small><em>Distribution of refill statuses across patients.</em></small>
 
 - Adherence distribution
 	![alt text](image-2.png)
-	Caption: Histogram showing adherence scores.
+	<small><em>Histogram showing adherence scores.</em></small>
 
 - Patient adherence details
 	![alt text](image-3.png) ![alt text](image-4.png)
-	Caption: Patient-level adherence timeline and details.
+	<small><em>Patient-level adherence timeline and details.</em></small>
 
 - Medication reminder queue
 	![alt text](image-5.png) ![alt text](image-6.png)
-	Caption: Example reminder queue view and status columns.
+	<small><em>Example reminder queue view and status columns.</em></small>
 
 - Refill recommendations
 	![alt text](image-7.png) ![alt text](image-8.png)
-	Caption: Candidate refill recommendations and nearby pharmacies.
+	<small><em>Candidate refill recommendations and nearby pharmacies.</em></small>
 
 - Refill message examples
 	![alt text](image-9.png) ![alt text](image-10.png)
-	Caption: AI-generated or templated reminder messages stored in the queue.
+	<small><em>AI-generated or templated reminder messages stored in the queue.</em></small>
 
 - High-risk patients
 	![alt text](image-11.png) ![alt text](image-12.png)
-	Caption: Patients flagged for follow-up due to adherence risk.
+	<small><em>Patients flagged for follow-up due to adherence risk.</em></small>
 
 Notes & Next Steps
 

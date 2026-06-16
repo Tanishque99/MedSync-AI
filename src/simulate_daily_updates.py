@@ -1,34 +1,42 @@
-import csv
-from pathlib import Path
+import random
 from datetime import datetime, timedelta
+from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "sample"
-PATIENTS_CSV = DATA_DIR / "patients.csv"
-UPDATES_CSV = DATA_DIR / "daily_updates.csv"
+import pandas as pd
 
+DATA_DIR = Path("data/sample")
+random.seed(123)
 
-def simulate_updates(days=7):
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    if not PATIENTS_CSV.exists():
-        print(f"No patients file at {PATIENTS_CSV}. Run generate_data.py first.")
-        return
-    with open(PATIENTS_CSV) as f:
-        reader = list(csv.DictReader(f))
-    start = datetime.utcnow()
-    updates = []
-    for d in range(days):
-        day = start + timedelta(days=d)
-        for p in reader[:5]:  # sample subset per day
-            updates.append({
-                "patient_id": p["patient_id"],
-                "event_time": day.isoformat(),
-                "note": f"Simulated touchpoint for patient {p['patient_id']} on {day.date()}"
-            })
-    with open(UPDATES_CSV, "w") as f:
-        writer = csv.DictWriter(f, fieldnames=["patient_id", "event_time", "note"])
-        writer.writeheader()
-        writer.writerows(updates)
-    print(f"Wrote {len(updates)} updates to {UPDATES_CSV}")
+prescriptions = pd.read_csv(DATA_DIR / "prescriptions.csv")
+logs = pd.read_csv(DATA_DIR / "medication_logs.csv")
 
-if __name__ == '__main__':
-    simulate_updates(14)
+today = datetime.today().date() + timedelta(days=1)
+new_logs = []
+
+for _, row in prescriptions.sample(100).iterrows():
+    intakes_per_day = int(row["intakes_per_day"])
+    reminder_hours = [8] if intakes_per_day == 1 else [8, 20] if intakes_per_day == 2 else [8, 14, 20]
+
+    for hour in reminder_hours:
+        scheduled_time = datetime.combine(today, datetime.min.time()) + timedelta(hours=hour)
+        status = random.choices(
+            ["Taken", "Missed", "Skipped", "Snoozed"],
+            weights=[0.78, 0.12, 0.06, 0.04]
+        )[0]
+
+        response_time = ""
+        if status in ["Taken", "Snoozed"]:
+            response_time = scheduled_time + timedelta(minutes=random.randint(1, 90))
+
+        new_logs.append({
+            "log_id": f"L{len(logs) + len(new_logs) + 1:07d}",
+            "prescription_id": row["prescription_id"],
+            "scheduled_time": scheduled_time,
+            "status": status,
+            "response_time": response_time
+        })
+
+updated_logs = pd.concat([logs, pd.DataFrame(new_logs)], ignore_index=True)
+updated_logs.to_csv(DATA_DIR / "medication_logs.csv", index=False)
+
+print(f"Added {len(new_logs)} new medication log records.")
